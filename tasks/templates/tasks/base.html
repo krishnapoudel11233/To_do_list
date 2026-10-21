@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'tasks/css/styles.css' %}">
+</head>
+<body>
+    <div class="page-shell">
+        <nav class="topbar">
+            <div class="container">
+                <a class="brand-wrap" href="{% url 'task_list' %}">
+                    <span class="brand-icon">✓</span>
+                    <span class="brand-copy">
+                        <span class="brand-kicker">Productivity</span>
+                        <span class="navbar-brand">Momentum Board</span>
+                    </span>
+                </a>
+
+                <div class="nav-pills">
+                    <span class="mini-pill">Daily Focus</span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
